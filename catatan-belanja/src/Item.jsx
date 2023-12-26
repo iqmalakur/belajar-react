@@ -3,7 +3,7 @@
 export default function Item({ item }) {
   return (
     <li>
-      <input type="checkbox" checked={item.checked} />
+      <input type="checkbox" />
       <span style={item.checked ? { textDecoration: "line-through" } : {}}>
         {item.quantity} {item.name}
       </span>

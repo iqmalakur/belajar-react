@@ -1,9 +1,13 @@
 /* eslint-disable react/prop-types */
 
-export default function Item({ item, onDeleteItem }) {
+export default function Item({ item, onDeleteItem, onToggleItem }) {
   return (
     <li>
-      <input type="checkbox" />
+      <input
+        type="checkbox"
+        checked={item.checked}
+        onChange={() => onToggleItem(item.id)}
+      />
       <span style={item.checked ? { textDecoration: "line-through" } : {}}>
         {item.quantity} {item.name}
       </span>

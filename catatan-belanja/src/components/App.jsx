@@ -58,7 +58,7 @@ export default function App() {
         onToggleItem={handleToggleItem}
         onClearItems={handleClearItems}
       />
-      <Footer />
+      <Footer items={items} />
     </div>
   );
 }
